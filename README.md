@@ -14,12 +14,8 @@ porque la lectura y el parseo del archivo se ejecutan en un hilo secundario.
 
 ## 🚀 Demo
 
-Una vez publicado con GitHub Pages:
-
-```
-https://<tu-usuario>.github.io/<nombre-del-repo>/
-```
-
+![alt text](image.png)
+![alt text](image-1.png)
 ---
 
 ## 📁 Estructura del proyecto
