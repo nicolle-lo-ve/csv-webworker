@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visor CSV con Web Workers</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>📊 Visor de CSV con Web Workers</h1>
+    <p>El archivo se lee y se procesa en un <strong>Web Worker</strong>, sin bloquear la interfaz.</p>
+  </header>
+
+  <main>
+    <!-- Zona de carga -->
+    <section class="drop-zone" id="dropZone">
+      <div class="drop-icon">📁</div>
+      <p>Arrastra tu archivo <strong>.csv</strong> aquí</p>
+      <p class="or">— o —</p>
+      <label class="btn" for="fileInput">Seleccionar archivo</label>
+      <input type="file" id="fileInput" accept=".csv,text/csv" hidden />
+      <button class="btn btn-secondary" id="exampleBtn" type="button">Cargar ejemplo</button>
+      <p class="hint">El archivo no se sube a ningún servidor: todo se procesa en tu navegador.</p>
+    </section>
+
+    <!-- Estado / progreso -->
+    <section class="status" id="status" hidden>
+      <div class="spinner" id="spinner"></div>
+      <p id="statusText">Procesando…</p>
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </section>
+
+    <!-- Resumen -->
+    <section class="info" id="info" hidden></section>
+
+    <!-- Tabla -->
+    <section class="table-wrapper" id="tableWrapper" hidden>
+      <table id="csvTable">
+        <thead id="csvHead"></thead>
+        <tbody id="csvBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ejemplo educativo · HTML + CSS + JavaScript + Web Workers</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
